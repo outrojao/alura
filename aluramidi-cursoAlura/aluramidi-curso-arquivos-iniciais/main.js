@@ -1,13 +1,8 @@
-function tocarPom(){
-    document.querySelector('#som_tecla_pom').play();
+function tocaPom(){
+    let somPom = document.querySelector('#som_tecla_pom');
+    somPom.play();
 }
 
-let tecla_pom = document.querySelector('.tecla_pom');
-tecla_pom.addEventListener('click', tocarPom)
+const ListaDeTeclas = document.querySelectorAll('.tecla'); /* ao invés de capturarmos um elemento por vez, conseguimos pegar todos de uma só vez. Portanto isto facilitará a manipulação, reutilização e manutenção do nosso código para todos os elementos que recebem o mesmo tipo de função. */
 
-function tocarClap(){
-    document.querySelector('#som_tecla_clap').play();
-}
-
-let tecla_clap = document.querySelector('.tecla_clap');
-tecla_clap.addEventListener('click', tocarClap)
+ListaDeTeclas[0].onclick = tocaPom;
