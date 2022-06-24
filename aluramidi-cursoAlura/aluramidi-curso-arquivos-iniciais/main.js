@@ -6,9 +6,9 @@ const ListaDeTeclas = document.querySelectorAll('.tecla'); /* ao invés de captu
 
 for (c = 0; c < ListaDeTeclas.length; c++){
 
-    const tecla = ListaDeTeclas[c];
-    const som = tecla.classList[1];
-    const idAudio = `#som_${som}`;
+    const tecla = ListaDeTeclas[c]; //constante criada afim de evitar a repetiçaõ de sintaxe
+    const som = tecla.classList[1]; //pegamos a segunda class de cada elemento para utiliza em junção com a tag de id
+    const idAudio = `#som_${som}`; //#som_xxxxx_xxx
 
     //exibição
     /*
@@ -17,7 +17,7 @@ for (c = 0; c < ListaDeTeclas.length; c++){
     */
     
     tecla.onclick = function (){ //função anônima
-        tocaSom(idAudio); //#som_xxxxx_xxx
+        tocaSom(idAudio); 
         //ja sabia a parte do template string antes do video :))
     } 
 }
