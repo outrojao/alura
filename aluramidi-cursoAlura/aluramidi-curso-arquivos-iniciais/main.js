@@ -20,6 +20,15 @@ for (c = 0; c < ListaDeTeclas.length; c++){
         tocaSom(idAudio); 
         //ja sabia a parte do template string antes do video :))
     } 
+
+    tecla.onkeydown = function (){
+        tecla.classList.add('ativa');
+    }
+
+    tecla.onkeyup = function (){
+        tecla.classList.remove('ativa');
+    }
+
 }
 
 //fiz o for bem no inicio onde o curso dizia que iria usar um loop
