@@ -1,0 +1,2 @@
+copie o código no console do navegador:
+document.querySelector('p').innerText = 'Alterando a frase da tag p'
