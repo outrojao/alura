@@ -1,5 +1,8 @@
 const controle = document.querySelectorAll('[data-controle]')
 const estatisticas = document.querySelectorAll('[data-estatistica]')
+const button = document.querySelector('#cor')
+const img = document.querySelector('.robo')
+const cores = document.querySelector('#select_cor')
 const pecas = {
     "bracos": {
         "forca": 29,
@@ -57,3 +60,32 @@ function atualizaEstatisticas(peca){
         elemento.textContent = Number(elemento.textContent) + pecas[peca][elemento.dataset.estatistica]
     })
 }
+
+cores.onchange = function() {
+    let cor = cores.value;
+  
+    switch(cor) {
+        case 'Preto':
+        img.src = 'img/Robotron 2000 - Preto.png'
+        break;
+        case 'Amarelo':
+        img.src = 'img/Robotron 2000 - Amarelo.png'
+        break;
+        case 'Branco':
+        img.src = 'img/Robotron 2000 - Branco.png'
+        break;
+        case 'Azul':
+        img.src = 'img/Robotron 2000 - Azul.png'
+        break;
+        case 'Rosa':
+        img.src = 'img/Robotron 2000 - Rosa.png'
+        break;
+        case 'Vermelho':
+        img.src = 'img/Robotron 2000 - Vermelhopng'
+        break;
+    }
+  }
+
+
+
+//ao inves de criar um botão para cada cor, o que seria mais trabalhoso, eu posso criar um botão que sempre ao ser clicado mude a cor do robotron mas por enquanto não sei como fazer, talvez como a mesma logica do projeto do soundpad da alura ou algo semelhante

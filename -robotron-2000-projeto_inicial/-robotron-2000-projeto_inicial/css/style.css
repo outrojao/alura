@@ -131,6 +131,32 @@ main {
     border-color: var(--main-cinza);
 }
 
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 1rem;
+}
+
+.select_cor label{
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.select_cor select{
+    font-family: 'Teko', sans-serif;
+    margin-top: 1em;
+    font-size: 2em;
+    text-transform: uppercase;
+    padding: 0.2em 1em;
+    float: right;
+    border: 3px solid var(--main-branco);
+    background: var(--main-branco);
+    clip-path: polygon(100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 0);
+    cursor: pointer;
+}
+
 .producao {
     margin-top: 1em;
     font-size: 2em;
@@ -143,7 +169,7 @@ main {
     cursor: pointer;
 }
 
-.producao:hover {
+.producao:hover, .select_cor select:hover {
     background: var(--main-preto);
     color: var(--main-branco)
 }
