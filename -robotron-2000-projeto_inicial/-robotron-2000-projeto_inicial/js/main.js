@@ -1,8 +1,7 @@
 const controle = document.querySelectorAll('[data-controle]')
 const estatisticas = document.querySelectorAll('[data-estatistica]')
-const button = document.querySelector('#cor')
+const button = document.querySelector('#mudarCor')
 const img = document.querySelector('.robo')
-const cores = document.querySelector('#select_cor')
 const pecas = {
     "bracos": {
         "forca": 29,
@@ -61,30 +60,20 @@ function atualizaEstatisticas(peca){
     })
 }
 
-cores.onchange = function() {
-    let cor = cores.value;
-  
-    switch(cor) {
-        case 'Preto':
-        img.src = 'img/Robotron 2000 - Preto.png'
-        break;
-        case 'Amarelo':
-        img.src = 'img/Robotron 2000 - Amarelo.png'
-        break;
-        case 'Branco':
-        img.src = 'img/Robotron 2000 - Branco.png'
-        break;
-        case 'Azul':
-        img.src = 'img/Robotron 2000 - Azul.png'
-        break;
-        case 'Rosa':
-        img.src = 'img/Robotron 2000 - Rosa.png'
-        break;
-        case 'Vermelho':
-        img.src = 'img/Robotron 2000 - Vermelhopng'
-        break;
+
+let corAtual = 0;
+function trocaImagem(){
+    const cores = ['Vermelho', 'Branco', 'Amarelo', 'Preto', 'Rosa', 'Azul']
+    img.src=`img/Robotron 2000 - ${cores[corAtual]}.png`
+    corAtual++
+    
+    if(corAtual === cores.length){
+       corAtual = 0
     }
-  }
+     
+ }
+
+ button.addEventListener('click', trocaImagem)
 
 
 
